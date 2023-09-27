@@ -1,38 +1,105 @@
-.App {
+body {
+  user-select: none;
   text-align: center;
+  background-image: url(assets/skillset.png);
+  background-repeat: no-repeat;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@media screen and (max-width: 520px) {
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.searchBox {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: space-evenly;
+  margin-top: 20px;
+}
+.searchBox input {
+  width: 60%;
+  height: 50px;
+  border: none;
+  background-color: chocolate;
   color: white;
+  padding: 10px;
+  border-radius: 4px;
+  font-size: 1.75em;
+  line-height: 30px;
+}
+.searchBox input:focus {
+  outline: none;
 }
 
-.App-link {
-  color: #61dafb;
+.listitems {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#currentItems {
+  background-color: lightblue;
+  color: green;
+  width: 50%;
+  padding: 0px 20px;
+  overflow-y: scroll;
+  height: 100%;
+}
+#currentItems div,
+#crossedItems div {
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  margin-bottom: 5px;
+  border-radius: 2px;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+#crossedItems {
+  background-color: lightsalmon;
+  color: white;
+  width: 50%;
+  padding: 0px 20px;
+  overflow-y: scroll;
+  height: 100%;
+}
+#crossedItems div {
+  text-decoration: line-through;
+}
+.header {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: azure;
+}
+
+.header input {
+  height: 40px;
+  padding: 10px 15px;
+  background-color: orangered;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 01px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+::placeholder {
+  color: white;
+  opacity: 1; /* Firefox */
+}
+
+::-ms-input-placeholder { /* Edge 12 -18 */
+color:white;
 }
